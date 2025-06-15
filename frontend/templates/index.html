@@ -1,0 +1,48 @@
+<!-- Minimal Bootstrap 5 + Flexbox layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Furniture Design Tools</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="page-container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Furniture Design Tools</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('ratio_calc') }}">Ratio Calculator</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Library Search</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <style>
+        .hero-section {
+          background-image: url("{{ url_for('static', filename='images/dividers.jpg') }}");
+          background-size: cover;
+          background-position: center;
+        }
+      </style>
+      <div class="hero-section">
+        <div class="overlay-content">
+          <h1>Welcome</h1>
+          <p>Your text here</p>
+        </div>
+      </div>
+      <!-- Move the style block to the HTML head for Jinja compatibility -->
+      <p>Your content goes here. The navbar stays on top and the content never hides behind it.</p>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
